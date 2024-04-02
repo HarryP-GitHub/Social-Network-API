@@ -1,0 +1,14 @@
+{
+  "name": "Social-Network-API",
+  "version": "1.0.1",
+  "description": "Social-Network-API project using Mongoose",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^7.0.2"
+  }
+}
