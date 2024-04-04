@@ -16,11 +16,11 @@ const userSchema = new Schema(
         match: [/.+\@.+..+/, 'Must match an']
     },
     thoughts: [{
-        type: Schema.type.ObjectId, 
+        type: Schema.Types.ObjectId, 
         ref: 'Thought'
     }],
     friends: [{
-        type: Schema.type.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'User'
     }],
   },
