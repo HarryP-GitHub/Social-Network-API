@@ -8,6 +8,11 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.get('/', (req, res) => {
+    res.send('Welcome to Social Network API');
+});
+
 app.use(routes);
 
 db.once('open', () => {
