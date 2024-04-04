@@ -1,5 +1,5 @@
 const { Thought, User } = require('../models');
-const { ObjectId } = require('mongoose').Types;
+// const { ObjectId } = require('mongoose').Types; no longer necessary
 
 const ThoughtController = {
 
@@ -105,7 +105,7 @@ const ThoughtController = {
   async removeReaction(req, res) {
     try {
       const updatedThought = await Thought.findByIdAndUpdate(req.params.thoughtId,
-        { $pull: { reactions: { reactionId: ObjectId(req.params.reactionId) } } },
+        { $pull: { reactions: { reactionId: req.params.reactionId } } },
         { new: true }
     );
     if (!updatedThought) {
